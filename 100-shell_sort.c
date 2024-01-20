@@ -37,8 +37,11 @@ k -= gap;
  */
 void shell_sort(int *array, size_t size)
 {
-int gap;
-for (gap = ((size - 1) / 3); gap >= 1; gap = ((gap - 1) / 3))
+int gap = 1;
+while (gap < (int)size / 3) {
+    gap = gap * 3 + 1;
+}
+for (gap += 0; gap >= 1; gap = ((gap - 1) / 3))
 {
 gap_sort(array, size, gap);
 print_array(array, size);
