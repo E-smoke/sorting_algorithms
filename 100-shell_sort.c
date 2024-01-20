@@ -38,6 +38,10 @@ k -= gap;
 void shell_sort(int *array, size_t size)
 {
 int gap, check;
+if (array == NULL)
+{
+return;
+}
 gap = 1;
 while (gap < (int)size / 3)
 {
