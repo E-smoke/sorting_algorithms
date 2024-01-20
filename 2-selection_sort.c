@@ -8,7 +8,7 @@ void selection_sort(int *array, size_t size)
 {
 int i, j, min, idx;
 i = 0;
-while ((size_t)i < size)
+while ((size_t)i < size - 1)
 {
 j = i;
 min = array[j];
@@ -20,7 +20,6 @@ if (min > array[j])
 min = array[j];
 idx = j;
 }
-++j;
 }
 if (i != idx)
 {
