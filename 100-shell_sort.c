@@ -9,7 +9,7 @@ void gap_sort(int *array, size_t size, int gap)
 {
 int i, j, k, c, temp;
 i = 0;
-for (j = gap; j < (int)(size - 1); ++j)
+for (j = gap; j < (int)(size); ++j)
 {
 if (array[i] > array[j])
 {
