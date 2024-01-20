@@ -22,9 +22,12 @@ idx = j;
 }
 ++j;
 }
+if (i != idx)
+{
 array[idx] = array[i];
 array[i] = min;
 print_array(array, size);
+}
 ++i;
 }
 }
