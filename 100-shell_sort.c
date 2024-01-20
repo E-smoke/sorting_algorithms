@@ -9,14 +9,13 @@ void gap_sort(int *array, size_t size, int gap)
 {
 int i, j, k, c, temp;
 i = 0;
-for (j = gap; j < (int)size; ++j)
+for (j = gap; j < (int)(size - 1); ++j)
 {
 if (array[i] > array[j])
 {
 temp = array[i];
 array[i] = array[j];
 array[j] = temp;
-print_array(array, size);
 c = i;
 k = i - gap;
 while (k >= 0 && array[k] > array[c])
@@ -24,7 +23,6 @@ while (k >= 0 && array[k] > array[c])
 temp = array[k];
 array[k] = array[c];
 array[c] = temp;
-print_array(array, size);
 c = k;
 k -= gap;
 }
@@ -43,5 +41,6 @@ int gap;
 for (gap = 4; gap >= 1; gap = ((gap - 1) / 3))
 {
 gap_sort(array, size, gap);
+print_array(array, size);
 }
 }
