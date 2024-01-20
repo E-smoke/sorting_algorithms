@@ -53,14 +53,10 @@ print_array(array, size);
 }
 else
 {
+gap_sort(array, size, gap);
 if (check != gap)
 {
-gap_sort(array, size, gap);
 print_array(array, size);
-}
-else
-{
-gap_sort(array, size, gap);
 }
 }
 }
