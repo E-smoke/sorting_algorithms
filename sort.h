@@ -31,5 +31,6 @@ void gap_sort(int *array, size_t size, int gap);
 void shell_sort(int *array, size_t size);
 void swap(listint_t *left, listint_t *right);
 void cocktail_sort_list(listint_t **list);
+void init(listint_t **left, listint_t **right);
 
 #endif

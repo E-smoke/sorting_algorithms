@@ -1,5 +1,15 @@
 #include "sort.h"
 /**
+ * init - to initialize so that the function wont exceed 40 lines
+ * @left: 1p
+ * @right: 2p
+ */
+void init(listint_t **left, listint_t **right)
+{
+*left = NULL;
+*right = NULL;
+}
+/**
  * swap - swaps two elements
  * @left: 1p
  * @right: 2p
@@ -26,8 +36,10 @@ left->prev = right;
 void cocktail_sort_list(listint_t **list)
 {
 listint_t *current, *left, *right;
-left = NULL;
-right = NULL;
+if (list == NULL || *list == NULL)
+{
+return; }
+init(&left, &right);
 current = *list;
 while (1)
 {
