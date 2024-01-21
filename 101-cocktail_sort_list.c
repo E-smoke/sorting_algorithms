@@ -41,7 +41,7 @@ if (current->n > (current->next)->n)
 swap(current, current->next);
 if ((current->prev)->prev == NULL)
 {
-*list = current; }
+*list = current->prev; }
 print_list(*list);
 continue; }
 current = current->next; }
