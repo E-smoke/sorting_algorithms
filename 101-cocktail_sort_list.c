@@ -26,9 +26,6 @@ left->prev = right;
 void cocktail_sort_list(listint_t **list)
 {
 listint_t *current, *left, *right;
-if (list == NULL || (*list) == NULL)
-{
-return; }
 left = NULL;
 right = NULL;
 current = *list;
