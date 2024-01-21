@@ -45,6 +45,8 @@ dest[i] = src[i];
 void counting_sort(int *array, size_t size)
 {
 int i, max, *ca, *na;
+if (array == NULL || size < 2)
+return;
 max = array[0];
 for (i = 1; i < (int)size; ++i)
 {
