@@ -29,5 +29,7 @@ int partition(int *array, size_t size, int l, int r);
 void quick_sort_recursive(int *array, size_t size, int l, int r);
 void gap_sort(int *array, size_t size, int gap);
 void shell_sort(int *array, size_t size);
+void swap(listint_t *left, listint_t *right);
+void cocktail_sort_list(listint_t **list);
 
 #endif
