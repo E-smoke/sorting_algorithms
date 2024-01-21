@@ -54,6 +54,10 @@ max = array[i];
 }
 }
 ca = create_array(max + 1);
+if (ca == NULL)
+{
+return;
+}
 init_to_zero(ca, max + 1);
 for (i = 0; i < (int)size; ++i)
 {
@@ -61,10 +65,14 @@ for (i = 0; i < (int)size; ++i)
 }
 for (i = 1; i < max + 1; ++i)
 {
-ca[i] += ca[i -1];
+ca[i] += ca[i - 1];
 }
 print_array(ca, max + 1);
 na = create_array(size);
+if (na == NULL)
+{
+return;
+}
 for (i  = (size - 1); i >= 0; --i)
 {
 na[--ca[array[i]]] = array[i];
