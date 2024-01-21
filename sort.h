@@ -32,5 +32,9 @@ void shell_sort(int *array, size_t size);
 void swap(listint_t *left, listint_t *right);
 void cocktail_sort_list(listint_t **list);
 void init(listint_t **left, listint_t **right);
+int *create_array(size_t size);
+void init_to_zero(int *array, size_t size);
+void copy(int *src, int *dest, size_t size);
+void counting_sort(int *array, size_t size);
 
 #endif
