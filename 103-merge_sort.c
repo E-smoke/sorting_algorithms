@@ -14,28 +14,31 @@ if (lptr[0] < rptr[0])
 {
 sptr[0] = lptr[0];
 sptr[1] = rptr[0];
-i = 2;
+i = 1;
 }
 else
 {
 for (i = 0; i < (int)size; ++i)
 {
-if (i < (int)(size - 1) && lptr[0] > rptr[i])
+if (lptr[0] > rptr[i])
 {
 sptr[i] = rptr[i];
 continue;
 }
 sptr[i] = lptr[0];
-++i;
 break;
 }
 }
+if (i == (int)size)
+{
+sptr[i] = lptr[0];
+}
 for (i += 0; i < (int)size; ++i)
 {
-sptr[i] = rptr[i - 1];
+sptr[i + 1] = rptr[i];
 }
 copy1(sptr, lptr, size);
-return (lptr);
+return (sptr);
 }
 /**
  * merge_sort1 - implements merge sort
@@ -55,21 +58,17 @@ else
 {
 lptr = array;
 rptr = array + 1;
-rptr = merge_sort1(rptr, size - 1, sptr);
-}
-if (sptr == NULL)
-{
-return (NULL);
+merge_sort1(rptr, size - 1, sptr);
 }
 printf("Merging...\n");
 printf("[left]: ");
 print_array(lptr, 1);
 printf("[right]: ");
 print_array(rptr, size - 1);
-sptr = merge(lptr, rptr, sptr, size);
+merge(lptr, rptr, sptr, size);
 printf("[Done]: ");
-print_array(sptr, size);
-return (lptr);
+print_array(lptr, size);
+return (sptr);
 }
 /**
  * merge_sort - implements merge sort
@@ -99,6 +98,6 @@ void copy1(int *src, int *dest, size_t size)
 int i;
 for (i = 0; i < (int)size; ++i)
 {
-src[i] = dest[i];
+dest[i] = src[i];
 }
 }
