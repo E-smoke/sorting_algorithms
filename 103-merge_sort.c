@@ -80,11 +80,11 @@ void merge_sort(int *array, size_t size)
 {
 int *sptr;
 sptr = (int *)malloc(sizeof(int) * size);
-merge_sort1(array, size, sptr);
 if (sptr == NULL)
 {
 return;
 }
+merge_sort1(array, size, sptr);
 free(sptr);
 }
 /**
