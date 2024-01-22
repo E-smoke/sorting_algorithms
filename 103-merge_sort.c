@@ -35,7 +35,7 @@ for (i += 0; i < (int)size; ++i)
 sptr[i] = rptr[i - 1];
 }
 copy(sptr, lptr, size);
-return (sptr);
+return (lptr);
 }
 /**
  * merge_sort1 - implements merge sort
@@ -85,7 +85,7 @@ if (sptr == NULL)
 return;
 }
 merge_sort1(array, size, sptr);
-copy(sptr, array, size);
+copy1(sptr, array, size);
 free(sptr);
 }
 /**
