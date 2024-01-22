@@ -62,9 +62,9 @@ merge_sort1(rptr, size - 1, sptr);
 }
 printf("Merging...\n");
 printf("[left]: ");
-print_array(lptr, 1);
+print_array(rptr, 1);
 printf("[right]: ");
-print_array(rptr, size - 1);
+print_array(lptr, size - 1);
 merge(lptr, rptr, sptr, size);
 printf("[Done]: ");
 print_array(lptr, size);
