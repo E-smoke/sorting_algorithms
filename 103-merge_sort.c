@@ -85,6 +85,7 @@ if (sptr == NULL)
 return;
 }
 merge_sort1(array, size, sptr);
+copy(sptr, array, size);
 free(sptr);
 }
 /**
