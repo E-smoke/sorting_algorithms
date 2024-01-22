@@ -34,7 +34,7 @@ for (i += 0; i < (int)size; ++i)
 {
 sptr[i] = rptr[i - 1];
 }
-copy(sptr, lptr, size);
+copy1(sptr, lptr, size);
 return (lptr);
 }
 /**
