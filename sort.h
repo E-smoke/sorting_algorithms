@@ -38,8 +38,8 @@ void copy(int *src, int *dest, size_t size);
 void counting_sort(int *array, size_t size);
 int *merge_sort1(int *array, size_t size, int *sptr);
 void merge_sort(int *array, size_t size);
-void copy1(int *src, int *dest,size_t size);
+void copy1(int *src, int *desti, size_t size);
 int hoare(int *ori_array, int *array, size_t size, size_t ori_size);
 void quick_sort_hoare(int *array, size_t size);
-void quick_sort_hoare1(int *ori_array, int *array, size_t size, size_t ori_size);
+void quick_sort_hoare1(int *oa, int *array, size_t size, size_t os);
 #endif
