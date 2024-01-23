@@ -32,10 +32,10 @@ while (j > -1 && array[j] > array[size - 1] && i != j)
 }
 if (i == j)
 {
-temp = array[j - 1];
-array[j - 1] = array[size - 1];
+temp = array[j + 1];
+array[j + 1] = array[size - 1];
 array[size - 1] = temp;
-value = (j - 1);
+value = (j + 1);
 break;
 }
 temp = array[i];
