@@ -47,21 +47,21 @@ return (value);
 }
 /**
  * quick_sort_hoare1 - implements quick sort using hoare partition
- * @ori_array: 1p
+ * @oa: 1p
  * @array: 2p
  * @size: 3p
- * @ori_size
+ * @os:4p
  */
-void quick_sort_hoare1(int *ori_array, int *array, size_t size, size_t ori_size)
+void quick_sort_hoare1(int *oa, int *array, size_t size, size_t os)
 {
-int pivot_index;
+int pi;
 if (size <= 1)
 {
 return;
 }
-pivot_index = hoare(ori_array, array, size, ori_size);
-quick_sort_hoare1(ori_array, array, pivot_index, ori_size);
-quick_sort_hoare1(ori_array, array + pivot_index + 1, size - pivot_index - 1, ori_size);
+pi = hoare(oa, array, size, os);
+quick_sort_hoare1(oa, array, pi, os);
+quick_sort_hoare1(oa, array + pi + 1, size - pi - 1, os);
 }
 /**
  * quick_sort_hoare - encapsulates quick_sort_hoare1()
